@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Nếu không phải file/thư mục thật thì route về index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# /tool/note/slug -> index.php?slug=slug
+RewriteRule ^([A-Za-z0-9\-]+)$ index.php?slug=$1 [L,QSA]

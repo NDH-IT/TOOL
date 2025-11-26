@@ -1,0 +1,17 @@
+# Không đẩy file cấu hình thật
+config.php
+
+# Không đẩy file SQL nếu bạn không muốn lộ cấu trúc/dữ liệu
+adminhv1_ndhit.sql
+*.sql
+
+# Thư mục upload
+upanh/uploads/
+
+# Một số file/thư mục không cần thiết
+.idea/
+.vscode/
+vendor/
+node_modules/
+.DS_Store
+Thumbs.db

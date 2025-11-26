@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Nếu không phải file hoặc thư mục thật
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Bắt mọi thứ sau /rutgonlink/ thành code, đẩy vào index.php?c=CODE
+RewriteRule ^([^/]+)/?$ index.php?c=$1 [L,QSA]
