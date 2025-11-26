@@ -1,5 +1,4 @@
 <?php
-// /tool/index.php - Trang chủ tổng hợp các tool
 $pageTitle = 'NDH IT Tools | Trang chủ';
 require_once __DIR__ . '/layout/header.php';
 ?>
@@ -30,7 +29,6 @@ require_once __DIR__ . '/layout/header.php';
         color: var(--muted);
     }
 
-    /* Ô tìm kiếm tool */
     .tools-search {
         margin: 14px auto 18px;
         max-width: 420px;
@@ -247,7 +245,6 @@ require_once __DIR__ . '/layout/header.php';
         </div>
     </div>
 
-    <!-- Ô tìm kiếm tool -->
     <div class="tools-search">
         <div class="tools-search-inner">
             <span class="tools-search-icon">🔍</span>
@@ -261,7 +258,6 @@ require_once __DIR__ . '/layout/header.php';
     </div>
 
     <div class="tools-grid">
-        <!-- Upload ảnh -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -290,7 +286,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
 
-        <!-- Rút gọn link -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -319,7 +314,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
 
-        <!-- Link -> QR -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -349,7 +343,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
         
-        <!-- Note Tool -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -382,7 +375,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
 
-        <!-- Vòng quay random -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -412,7 +404,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
 
-        <!-- Câu cá random -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -442,7 +433,6 @@ require_once __DIR__ . '/layout/header.php';
             </div>
         </div>
 
-        <!-- Slot trống cho tool tương lai -->
         <div class="tool-card">
             <div class="tool-row-header">
                 <div class="tool-main">
@@ -477,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return str
             .toLowerCase()
             .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, ''); // bỏ dấu tiếng Việt
+            .replace(/[\u0300-\u036f]/g, '');
     }
 
     searchInput.addEventListener('input', function () {
@@ -489,13 +479,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const title = titleEl ? normalize(titleEl.textContent) : '';
 
-            // gom tất cả meta-item vào 1 chuỗi
             let metaText = '';
             metaEls.forEach(m => {
                 metaText += ' ' + normalize(m.textContent);
             });
 
-            // điều kiện hiển thị
             if (
                 query === '' ||
                 title.includes(query) ||
@@ -509,7 +497,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
 
 <?php
 require_once __DIR__ . '/layout/footer.php';
